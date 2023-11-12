@@ -1,0 +1,95 @@
+@media only screen and (min-width: 610px) {
+  /***** Tablet - Header ******/
+
+  .logo {
+    left: 5%;
+  }
+  nav {
+    position: static;
+    top: 0;
+    display: block;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+  }
+  nav li {
+    width: 20%;
+    height: 70px;
+    display: inline-block;
+    padding: 20px;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  /***** Tablet - Čtenářův deník - obrázky ******/
+
+  .books {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  .books-img {
+    height: 185px;
+    flex-basis: calc(100% / 2 - 10px);
+  }
+  .img1,
+  .img2 {
+    margin-top: 30px;
+  }
+  .img3 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width: 761px) {
+  /***** NoteBook - Čtenářův deník - obrázky ******/
+
+  .books {
+    justify-content: space-between;
+    gap: 13px;
+  }
+  .books-img {
+    flex-basis: calc(100% / 3 - 10px);
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  /***** NoteBook - Přihlášení ******/
+
+  .login-form input[type="password"] {
+    margin-left: 55px;
+  }
+  .login-form input[type="submit"] {
+    margin-left: 150px;
+  }
+
+  .result-text {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .row {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /***** Desktop - Header ******/
+
+  .logo {
+    left: 10%;
+  }
+
+  nav li {
+    margin: 0 50px;
+  }
+}

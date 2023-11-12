@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merienda", sans-serif;
+}
+
+:root {
+  --special_brown: #2c200b;
+  --special_beige: #f0f0c9;
+  --background_brown: #392d23;
+  --special_red: #f37878;
+  --special_green: #4cd46c;
+}
+
+.row {
+  width: calc(100vw - 10%);
+  margin: 0 auto;
+}
+
+/***** Header ******/
+
+header {
+  background-color: var(--special_brown);
+  height: 70px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 5%;
+}
+.logo img {
+  width: 60px;
+}
+
+nav {
+  position: absolute;
+  top: 20px;
+  left: 40%;
+  background-color: var(--special_brown);
+  opacity: 1;
+  display: none;
+}
+nav li {
+  text-align: center;
+  display: block;
+  list-style: none;
+  margin-bottom: 10px;
+  opacity: 1;
+  width: 100px;
+}
+nav li a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-icon {
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  cursor: pointer;
+  display: block;
+}
+
+/***** Čtenářův deník - citáty ******/
+
+.text {
+  position: relative;
+}
+
+.light {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background-color: #fff;
+  padding: 5px 10px;
+  color: var(--background_brown);
+  font-weight: bold;
+  border: 2px solid var(--background_brown);
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.dark {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background-color: var(--background_brown);
+  padding: 5px 10px;
+  color: var(--special_beige);
+  font-weight: bold;
+  border: 2px solid var(--background_brown);
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+
+.container {
+  background-color: #fff;
+}
+.quotes h1 {
+  text-align: center;
+  color: var(--special_brown);
+  font-size: 50px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+.quotes p {
+  margin-bottom: 10px;
+  color: var(--special_brown);
+}
+.quotes .author {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/***** Čtenářův deník - obrázky ******/
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.books-img {
+  height: 185px;
+  max-width: 280px;
+  margin: 0 auto;
+}
+.books-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.img1 {
+  margin-top: 30px;
+}
+.img3 {
+  margin-bottom: 50px;
+}
+
+/***** Přihlášení ******/
+
+.login {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("img/old-953394_1920.jpg");
+  height: 100vh;
+  position: relative;
+}
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-form h2 {
+  font-size: 30px;
+  color: var(--special_beige);
+  margin-bottom: 20px;
+}
+.login-form input[type="password"] {
+  color: var(--special_beige);
+  font-size: 20px;
+  height: 50px;
+  width: 250px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: var(--special_beige) solid;
+  text-align: center;
+}
+.login-form input[type="submit"] {
+  color: var(--special_beige);
+  background-color: var(--special_brown);
+  padding: 5px;
+  margin-left: 95px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.result-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: start;
+  margin-left: 12%;
+}
+
+/***** Tlačítko zpět ******/
+
+#back-button {
+  position: fixed;
+  bottom: 55px;
+  right: 5%;
+  background-color: var(--special_beige);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: none;
+}
+#back-button a {
+  text-decoration: none;
+  color: var(--special_brown);
+  font-weight: bold;
+}
+#back-button:hover {
+  transform: scale(1.2);
+  transition: all 0.5s linear;
+}
+
+/***** Patička ******/
+
+footer {
+  height: 70px;
+  background-color: var(--special_brown);
+  color: #fff;
+  text-align: center;
+}
+footer p {
+  height: 70px;
+  font-size: 11px;
+  padding: 25px;
+}
+
+/***** Stylování textu v javascriptu ******/
+.valid {
+  color: var(--special_green);
+}
+
+.invalid {
+  color: var(--special_red);
+}
